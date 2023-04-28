@@ -8,13 +8,14 @@ const show = require('./config/flashMiddle');
 const express_ejs_layouts = require('express-ejs-layouts');
 const dot_env = require('dotenv');
 dot_env.config();
+mongoose.set('strictQuery', false);
 
 const port = 8080;
 
 const app = express();
 
 app.use(session({
-  secret: 'your-secret-key',
+  secret: process.env.SECRET_KEY,
   resave: false,
   saveUninitialized: false
 }));
@@ -39,7 +40,7 @@ app.use('/', require('./routes/main'));
 
 const ConnectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://varshneyrahul203:1234@cluster0.lzn1m0q.mongodb.net/todo");
+    const conn = await mongoose.connect(process.env.MONGO_URL);
     console.log(`MongoDB connected  successfull : ${conn.connection.host}`);
   } catch (err) {
     console.log(`Error In Connecting MongoDB: ${err}`);
