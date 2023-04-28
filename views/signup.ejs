@@ -1,0 +1,75 @@
+<title>Signup</title>
+<style>
+    body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+    }
+
+    form {
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #0066cc;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+        background-color: #0066cc;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0055aa;
+    }
+</style>
+
+<form action="/signup" method="POST">
+    <h2>Signup</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPass">Confirm Password:</label>
+    <input type="password" id="confirmPass" name="confirmPass" required>
+
+    <input type="submit" value="Signup">
+    <p>Already have an account? <a href="/login">Log In</a></p>
+</form>

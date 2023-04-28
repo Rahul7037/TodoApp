@@ -1,0 +1,70 @@
+<title>Login</title>
+<style>
+    body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+    }
+
+    form {
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #0066cc;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+        background-color: #0066cc;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0055aa;
+    }
+</style>
+
+<form action="/login" method="POST">
+    <h2>Login</h2>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+
+    <input type="submit" value="Login">
+    <p>Don't have an account yet? <a href="/signup">Sign Up</a></p>
+</form>

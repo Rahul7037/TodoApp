@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "flash": "^1.1.0",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "crud-application",
+  "description": "-In this repository, I have created CRUD operation sites using Nodejs as backend with Nosql database.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Rahul Varshney",
+  "license": "ISC"
+}
