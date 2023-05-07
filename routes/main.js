@@ -66,9 +66,8 @@ router.post('/signup', (req, res) => {
             res.redirect('/login');
         })
             .catch((err) => {
-                console.log(err);
-                req.flash('error','Error Creating');
-                res.send("Error Creating");
+                // console.log(err);
+                req.flash('error','Enter a Valid Email');
                 res.redirect('/signup');
             });
     });

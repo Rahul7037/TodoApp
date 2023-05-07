@@ -9,7 +9,13 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        validate: {
+            validator: function (v) {
+                return /\b[A-Z0-9.]+@gmail\.com\b/i.test(v);
+            },
+            message: props => `${props.value} is not a valid Gmail address!`
+        }
     },
     password: {
         type: String,
@@ -17,7 +23,7 @@ const userSchema = new mongoose.Schema({
     },
     confirmPass: {
         type: String,
-        required:true
+        required: true
     }
 });
 
